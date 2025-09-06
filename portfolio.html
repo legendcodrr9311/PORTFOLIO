@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vansh Saini — Frontend Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1: #e6f0ff;
+      --bg2: #cfe6ff;
+      --accent: #2b6ef6;
+      --accent-2: #6aa7ff;
+      --card: #ffffff;
+      --muted: #6b7280;
+      --radius: 14px;
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:linear-gradient(180deg,var(--bg1),var(--bg2));color:#0b1220}
+    a{color:inherit;text-decoration:none}
+
+    .container{max-width:1100px;margin:32px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .avatar{width:60px;height:60px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px;box-shadow:0 8px 20px rgba(43,110,246,0.18)}
+    .title h1{margin:0;font-size:20px}
+    .title p{margin:0;color:var(--muted);font-size:13px}
+
+    nav{display:flex;gap:12px;align-items:center}
+    .btn{background:var(--card);padding:10px 14px;border-radius:10px;box-shadow:0 6px 14px rgba(16,24,40,0.06);cursor:pointer;border:1px solid rgba(11,18,32,0.04);font-weight:600}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;border:none}
+
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;margin-top:26px}
+    .hero-card{background:rgba(255,255,255,0.7);padding:28px;border-radius:var(--radius);backdrop-filter:blur(6px);box-shadow:0 12px 30px rgba(16,24,40,0.06)}
+    .hero h2{margin:0 0 8px 0;font-size:26px}
+    .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    .skill{padding:8px 12px;border-radius:999px;background:rgba(43,110,246,0.12);font-weight:600;color:var(--accent)}
+
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:20px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 10px 30px rgba(16,24,40,0.06);border:1px solid rgba(11,18,32,0.04);transition:transform .28s ease,box-shadow .28s}
+    .card:hover{transform:translateY(-8px);box-shadow:0 26px 50px rgba(11,18,32,0.12)}
+
+    .timeline{margin-top:22px}
+    .timeline li{margin-bottom:12px}
+
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+    form{background:var(--card);padding:16px;border-radius:12px}
+    label{display:block;font-size:13px;margin-bottom:6px}
+    input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(11,18,32,0.06);font-family:inherit}
+    textarea{min-height:120px}
+
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
+
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr}
+      .contact{grid-template-columns:1fr}
+      nav{display:none}
+    }
+
+    .socials{display:flex;gap:12px;align-items:center;margin-top:12px}
+    .socials img{width:30px;height:30px;border-radius:6px;box-shadow:0 2px 4px rgba(0,0,0,0.1)}
+
+    .fab{position:fixed;right:18px;bottom:18px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;padding:12px 14px;border-radius:12px;box-shadow:0 18px 36px rgba(43,110,246,0.18);border:none;cursor:pointer}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar">VS</div>
+        <div class="title">
+          <h1>Vansh Saini</h1>
+          <p>Frontend Developer</p>
+        </div>
+      </div>
+      <nav>
+        <a class="btn" href="#projects">Projects</a>
+        <a class="btn" href="#about">About</a>
+        <a class="btn" href="#contact">Contact</a>
+        <a class="btn primary" id="downloadCv" href="CV vansh saini.jpg">Download CV</a>
+      </nav>
+    </header>
+
+    <section class="hero" id="about">
+      <div class="hero-card">
+        <h2>Hi — I’m Vansh</h2>
+        <p>Passionate front-end developer specializing in creating responsive, user-friendly web applications. Proficient in modern JavaScript frameworks with a strong foundation in building pixel-perfect designs.</p>
+        <div class="skills">
+          <div class="skill">HTML</div>
+          <div class="skill">CSS</div>
+          <div class="skill">JavaScript</div>
+          <div class="skill">React</div>
+          <div class="skill">Redux</div>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <h3>Available for hire</h3>
+        <p>Builds modern responsive interfaces and converts designs into production-ready code.</p>
+        <div class="socials">
+          <a href="mailto:vanshsaini9311@gmail.com" title="Gmail"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail"></a>
+          <a href="https://github.com/legendcodrr9311" target="_blank" title="GitHub"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub"></a>
+          <a href="https://www.linkedin.com/in/vansh-saini-6464a4212/" target="_blank" title="LinkedIn"><img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn"></a>
+          <a class="btn" id="viewCert" href="oracle certificate.pdf">Oracle Cert</a>
+        </div>
+      </aside>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <article class="card">
+          <h3>Myntra Clone</h3>
+          <p>To transform a static Myntra clone into a full-stack, dynamic website with backend and database integration.</p>
+          <a class="btn" href="https://github.com/legendcodrr9311/myntra-clone-html-css-" target="_blank">View Repo</a>
+        </article>
+        <article class="card">
+          <h3>Working Calculator</h3>
+          <p>Fully functional calculator made with HTML, CSS and JavaScript. Includes all-clear, backspace, and operators.</p>
+          <a class="btn" href="https://github.com/legendcodrr9311/Working-Calculator-HTML-CSS-JAVASCRIPT-" target="_blank">View Repo</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="timeline">
+      <h2>Experience & Education</h2>
+      <ul>
+        <li><strong>Oracle Certificate</strong> — 7 hour course. <a id="viewCert2" href="oracle certificate.pdf">View certificate</a></li>
+      </ul>
+    </section>
+
+    <section id="contact" class="contact">
+      <div>
+        <h2>Contact</h2>
+        <p>Feel free to reach out for projects or work opportunities. I'll get back within 48 hours.</p>
+        <div class="socials">
+          <a href="mailto:vanshsaini9311@gmail.com" title="Gmail"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail"></a>
+          <a href="https://github.com/legendcodrr9311" target="_blank" title="GitHub"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub"></a>
+          <a href="https://www.linkedin.com/in/vansh-saini-6464a4212/" target="_blank" title="LinkedIn"><img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn"></a>
+        </div>
+      </div>
+      <form id="contactForm">
+        <label for="name">Name</label>
+        <input id="name" name="name" required />
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit" class="btn primary">Send message</button>
+      </form>
+    </section>
+
+    <footer>Designed & built by <strong>Vansh Saini</strong> • <span id="year"></span></footer>
+  </div>
+  <button class="fab" id="topBtn">↑</button>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const topBtn = document.getElementById('topBtn');
+    topBtn.addEventListener('click', ()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+    function openPDF(){
+      const pdfUrl = 'oracle certificate VANSH SAINI (IOT).pdf';
+      window.open(pdfUrl, '_blank');
+    }
+
+    document.getElementById('viewCert').addEventListener('click', e=>{e.preventDefault();openPDF();});
+    document.getElementById('viewCert2').addEventListener('click', e=>{e.preventDefault();openPDF();});
+
+    document.getElementById('downloadCv').addEventListener('click', (e)=>{
+      e.preventDefault();
+      const win = window.open('', '_blank');
+      win.document.write(`<!doctype html><html><head><title>Vansh Saini CV</title></head><body style="font-family:Arial;line-height:1.6;padding:40px;max-width:800px;margin:auto;">
+        <h1 style="color:#2b6ef6;">Vansh Saini</h1>
+        <h3>Frontend Developer</h3>
+        <p><strong>Email:</strong> vanshsaini9311@gmail.com<br>
+        <strong>LinkedIn:</strong> linkedin.com/in/vansh-saini-6464a4212<br>
+        <strong>GitHub:</strong> github.com/legendcodrr9311</p>
+        <h2>About</h2>
+        <p>Passionate front-end developer specializing in creating responsive, user-friendly web applications. Proficient in modern JavaScript frameworks with a strong foundation in building pixel-perfect designs.</p>
+        <h2>Skills</h2>
+        <ul><li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li><li>Redux</li></ul>
+        <h2>Projects</h2>
+        <p><strong>Myntra Clone</strong> — <a href="https://github.com/legendcodrr9311/myntra-clone-html-css-">Repo</a></p>
+        <p><strong>Working Calculator</strong> — <a href="https://github.com/legendcodrr9311/Working-Calculator-HTML-CSS-JAVASCRIPT-">Repo</a></p>
+        <h2>Experience & Education</h2>
+        <p>Oracle Certificate — <a href="oracle certificate VANSH SAINI (IOT).pdf">View Certificate</a></p>
+      </body></html>`);
+      win.document.close();
+    });
+
+    const form=document.getElementById('contactForm');
+    form.addEventListener('submit',e=>{e.preventDefault();alert('Form submitted!');});
+  </script>
+</body>
+</html>
